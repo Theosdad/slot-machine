@@ -1,0 +1,26 @@
+.header {
+  width: 100%;
+
+  border-bottom: 2px solid #913bff;
+  background: linear-gradient(180deg, #8000ff 0%, #9e00ff 40.42%, #61009c 100%);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 -11px 19px 0 rgba(56, 0, 112, 0.63) inset;
+
+  &__container {
+    padding: 10px;
+    padding-left: 34px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    margin-right: 8%;
+  }
+
+  &__stars {
+    margin-right: 10.5%;
+  }
+
+  &__balance {
+    margin-right: auto;
+  }
+}

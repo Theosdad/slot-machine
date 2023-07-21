@@ -1,0 +1,18 @@
+.bet {
+  display: flex;
+  gap: 13px;
+
+  &__wrapper {
+    border-radius: 10px;
+    background: #320950;
+    padding: 7px 14px;
+
+    span {
+      text-shadow: 0 4px 10px rgba(250, 255, 0, 0.62);
+      background-image: linear-gradient(180deg, #ebff00 0%, #ffa800 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

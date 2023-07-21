@@ -1,0 +1,30 @@
+.win {
+  display: none;
+
+  &__wrapper {
+    border-radius: 10px;
+    background: #320950;
+    padding: 7px 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 37px;
+
+    span {
+      background-image: linear-gradient(180deg, #ffffff 0%, #1dc9ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #244581;
+
+      &#win-score {
+        text-shadow: 0 4px 10px rgba(250, 255, 0, 0.62);
+        background-image: linear-gradient(180deg, #ebff00 0%, #ffa800 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0;
+      }
+    }
+  }
+}

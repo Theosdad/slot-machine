@@ -1,0 +1,27 @@
+.stars {
+  position: relative;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 241px;
+
+  border-radius: 18.5px;
+  border-bottom: 1px solid #ffb800;
+  background: #370063;
+  box-shadow: 0 4px 3px 0 rgba(32, 0, 65, 0.91) inset;
+
+  img {
+    position: absolute;
+    left: -5px;
+    top: -7px;
+  }
+
+  span {
+    background-image: linear-gradient(180deg, #0066ff 0%, #bd00ff 100%);
+    background-clip: text;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
