@@ -55,6 +55,12 @@ export function processScripts () {
     .pipe(browser.stream());
 }
 
+export function optimizeImages () {
+  return gulp.src('source/img/**/*.{png}')
+    .pipe(gulpIf(!isDevelopment, squoosh()))
+    .pipe(gulp.dest('build/img'))
+}
+
 export function optimizeVector () {
   return gulp.src(['source/img/**/*.svg', '!source/img/icons/**/*.svg'])
     .pipe(svgo())
@@ -110,6 +116,7 @@ function compileProject (done) {
     optimizeVector,
     createStack,
     copyAssets,
+    optimizeImages,
   )(done);
 }
 
