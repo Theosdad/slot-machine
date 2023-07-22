@@ -93,6 +93,7 @@ const spin = () => {
       if (i === spins - 1) {
         checkWin();
         spinning = false;
+        saveResultsToSession();
       }
     }, i * 200);
   }
@@ -174,4 +175,23 @@ decreaseBet.addEventListener('click', () => {
   }
 });
 
+function saveResultsToSession() {
+  sessionStorage.setItem('score', score);
+  sessionStorage.setItem('starsAmount', starsAmount.textContent);
+}
+
+function loadResultsFromSession() {
+  const savedScore = sessionStorage.getItem('score');
+  const savedStarsAmount = sessionStorage.getItem('starsAmount');
+  if (savedScore !== null) {
+    score = parseFloat(savedScore);
+    scoreDisplay.textContent = `${score}`;
+  }
+  if (savedStarsAmount !== null) {
+    starsAmount.textContent = parseFloat(savedStarsAmount);
+  }
+}
+
+
+loadResultsFromSession();
 populateReelElements();
