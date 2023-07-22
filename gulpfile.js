@@ -56,7 +56,7 @@ export function processScripts () {
 }
 
 export function optimizeImages () {
-  return gulp.src('source/img/**/*.{png}')
+  return gulp.src('source/img/**/*.png')
     .pipe(gulpIf(!isDevelopment, squoosh()))
     .pipe(gulp.dest('build/img'))
 }
@@ -79,6 +79,7 @@ export function copyAssets () {
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
+    'source/img/*.jpg'
   ], {
     base: 'source'
   })
